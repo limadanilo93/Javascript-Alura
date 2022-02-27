@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+.form__camp {
+    padding: 0.2rem;
+    margin: 1rem;
+    font-weight: 600;
+}
