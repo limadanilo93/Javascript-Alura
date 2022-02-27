@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
 </head>
 <body>
     <H1>MALUCÃO VOCÊ</H1>
-    <input type="number" name="campos" id="despesas">
+    <form action="" class="form">
+        <label for="nome"></label>Seu Nome<input type="text" name="cliente" id="nome">
+        <label for="idade"></label>Sua Idade<input type="number" name="cliente" id="idade">
+        <label for="cpf"></label>Seu CPF<input type="text" name="cliente" id="cpf">
+        <label for="email"></label>Seu Email<input type="email" name="cliente" id="email">
+        <label for="salario-inicial">Salário inicial</label><input type="number" name="cliente" id="salario__inicial">
+        <label for="despesas">Despesas</label><input type="number" name="cliente" id="despesas">
+        <input type="button" name="cliente" id="enviar" value="Enviar">
+
+    </form>
 </body>
 </html>
