@@ -34,7 +34,11 @@ function novoCliente(){
         newClient.alteraSaldo()
         console.log(newClient.saldo)
     }
-    
+    newClient.dependente = {
+        nome: '',
+        idade,
+        justapostg: ['a', 'b', 'c', 'd']
+    }
     
 
 }
