@@ -39,6 +39,10 @@ class Cliente {
     
 
 } */
+/* const envFormulario = document.querySelector('#enviar');
+
+envFormulario.onclick = novoCliente 
+ */
 let nome = 'Danilo'
 let idade = '28'
 let cpf = '154343435432'
@@ -79,15 +83,25 @@ for(info in newClient){
 }
 
 //console.log(relatorio)
-pas = (object,key) => {Object.keys(object).map(k => {if(k === key){ console.log(object[key])}})}
-pas(newClient, 'dependentes')
-pas(newClient2, 'salario')
-/* const envFormulario = document.querySelector('#enviar');
+pas = (object,key) => {Object.keys(object).map(k => {if (k === key){return object[key]}})}
+//pas(newClient, 'dependentes')
+//pas(newClient2, 'salario')
 
-envFormulario.onclick = novoCliente 
- */
+const dependentes = newClient.dependentes
+const myJ = JSON.stringify(dependentes)
 
-
-
-
-
+const asa = [...dependentes, ...dependentes, ...dependentes, ...dependentes, ...dependentes]
+//console.log(myJ)
+myJ
+fs = require('fs');
+/* fs.writeFile('teste.json', myJ, function (err){
+    if (err) return console.log(err);
+}) */
+let myNJ
+try {
+    const data = fs.readFileSync('teste.json', 'utf8')
+    myNJ = JSON.parse(data)
+  } catch (err) {
+    console.error(err)
+  }
+  console.log(myNJ)
