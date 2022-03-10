@@ -1,5 +1,5 @@
 const ir = (renda)=> {return renda<1903 ? 0 : renda<2826 ? 0.075 : renda<3751 ? 0.15 : renda<4664 ? 0.225 : 0.275}
-class cliente {
+class Cliente {
     constructor(nome, idade, cpf, email, salario, despesasFixas) {
         this.nome = nome
         this.idade = idade
@@ -20,7 +20,7 @@ class cliente {
         this.salario = aumento*this.salario
     }
 }
-function novoCliente(){
+/* function novoCliente(){
     
     let nome = document.getElementById('nome').value
     let idade = document.getElementById('idade').value
@@ -41,15 +41,35 @@ function novoCliente(){
     }
     
 
-}
+} */
+nome = 'Danilo'
+idade = '28'
+cpf = '154343435432'
+email = 'danilo@gmail.com'
+salario = 8225
+despesasFixas = 2314
+const newClient = new Cliente(nome, idade, cpf, email, salario, despesasFixas)
 
+newClient.dependentes = [{
+    name: 'Ans',
+    idade: 25,
+    jeral: true,
+}]
 
-
-
-const envFormulario = document.querySelector('#enviar');
+newClient.dependentes.push({
+    name: 'as',
+    idade: 26,
+    jeral: false,
+})
+console.log(newClient)
+const maisNova = newClient.dependentes.filter(dependente => dependente.idade===25)
+console.log(maisNova)
+newClient.alteraSaldo();
+console.log(newClient)
+/* const envFormulario = document.querySelector('#enviar');
 
 envFormulario.onclick = novoCliente 
-
+ */
 
 
 
