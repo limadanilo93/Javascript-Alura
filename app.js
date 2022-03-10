@@ -88,20 +88,20 @@ pas = (object,key) => {Object.keys(object).map(k => {if (k === key){return objec
 //pas(newClient2, 'salario')
 
 const dependentes = newClient.dependentes
-const myJ = JSON.stringify(dependentes)
+const myJ = JSON.stringify(newClient)
 
 const asa = [...dependentes, ...dependentes, ...dependentes, ...dependentes, ...dependentes]
 //console.log(myJ)
 myJ
 fs = require('fs');
-/* fs.writeFile('teste.json', myJ, function (err){
+fs.writeFile('teste.json', myJ, function (err){
     if (err) return console.log(err);
-}) */
-let myNJ
-try {
+}) 
+console.log(Cliente.prototype)
+/* try {
     const data = fs.readFileSync('teste.json', 'utf8')
     myNJ = JSON.parse(data)
   } catch (err) {
     console.error(err)
   }
-  console.log(myNJ)
+ */

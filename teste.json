@@ -1,1 +1,1 @@
-[{"name":"Ans","idade":25,"jeral":true},{"name":"as","idade":26,"jeral":false}]
+{"nome":"Danilo","idade":"28","cpf":"154343435432","email":"danilo@gmail.com","salario":8225,"despesasFixas":2314,"saldo":1181.625,"dependentes":[{"name":"Ans","idade":25,"jeral":true},{"name":"as","idade":26,"jeral":false}]}
