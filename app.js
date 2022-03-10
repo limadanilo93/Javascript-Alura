@@ -15,10 +15,7 @@ class Cliente {
         this.saldo = this.saldo + this.liquido(this.salario, ir(this.salario)) - this.despesasFixas - despesasVar
         return this.saldo
     }
-    alteraSalario(aumento){
-
-        this.salario = aumento*this.salario
-    }
+    alteraSalario = aumento => {this.salario = this.salario + aumento*this.salario}
 }
 /* function novoCliente(){
     
@@ -42,14 +39,20 @@ class Cliente {
     
 
 } */
-nome = 'Danilo'
-idade = '28'
-cpf = '154343435432'
-email = 'danilo@gmail.com'
-salario = 8225
-despesasFixas = 2314
+let nome = 'Danilo'
+let idade = '28'
+let cpf = '154343435432'
+let email = 'danilo@gmail.com'
+let salario = 8225
+let despesasFixas = 2314
 const newClient = new Cliente(nome, idade, cpf, email, salario, despesasFixas)
-
+nome = 'Abranil'
+idade = '29'
+cpf = '1543436445432'
+email = 'abranil@gmail.com'
+salario = 7102
+despesasFixas = 1523
+const newClient2 = new Cliente(nome, idade, cpf, email, salario, despesasFixas)
 newClient.dependentes = [{
     name: 'Ans',
     idade: 25,
@@ -61,11 +64,24 @@ newClient.dependentes.push({
     idade: 26,
     jeral: false,
 })
-console.log(newClient)
+//console.log(newClient)
 const maisNova = newClient.dependentes.filter(dependente => dependente.idade===25)
-console.log(maisNova)
+//console.log(maisNova)
 newClient.alteraSaldo();
-console.log(newClient)
+//console.log(newClient)
+let relatorio = "";
+for(info in newClient){
+    if (typeof newClient[info] != 'object' && typeof newClient[info] != 'function'){
+        relatorio += `${info}: ${newClient[info]}; `
+    }
+
+    
+}
+
+//console.log(relatorio)
+pas = (object,key) => {Object.keys(object).map(k => {if(k === key){ console.log(object[key])}})}
+pas(newClient, 'dependentes')
+pas(newClient2, 'salario')
 /* const envFormulario = document.querySelector('#enviar');
 
 envFormulario.onclick = novoCliente 
